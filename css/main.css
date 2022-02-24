@@ -1,0 +1,476 @@
+/* ___________________global css__________________________ */
+:root {
+    --main-color: #10cab7;
+    --secondary-color:#f6f6f6;
+}
+body{
+font-family: 'Work Sans', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: content-box;
+}
+.container{
+    padding-right: 15px;
+    padding-left: 15px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:768px) {
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width:1200px) {
+    .container{
+        width: 1170px;
+    } 
+}
+/* _______________________  Page contents________________________________ */
+.bacgroundText{                        /* star global components */
+    font-weight: 800;
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    margin: 0px;
+    letter-spacing: -3px;   
+}
+.bacgroundText + p{
+    color: #797979;
+    text-align: center;
+    font-size: 20px;
+    margin: -30px 0 0;
+}
+@media (max-width:767px) {
+    .bacgroundText{
+        font-size: 60px;
+    }
+    .bacgroundText + p{
+        margin: -20px 0 0;
+    }
+}                                    /* End components */
+/* _______________________________________________________________ */
+.header .container{                                     /* start the header section */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.header .container .logo{
+    width: 60px;
+}
+.header{
+    padding: 20px;
+}
+.header .container .links .icon{ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 31px;
+    height: 21px;
+    justify-content: end;
+    
+}
+.header .container .links .icon .one{
+    width: 100%;
+    height: 2px;
+}
+.header .container .links .icon .two{
+    width: 50%;
+    height: 2px;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+.header .container .links:hover .icon .two{ width: 100%;}
+.header .container .links .icon .three{
+    width: 100%;
+    height: 2px;
+}
+.header .container .links .icon .one,
+.header .container .links .icon .two,
+.header .container .links .icon .three{
+    background-color: #333;
+}
+ /* The end of bulding the icon */
+/*  The list of links */
+.header .container .links ul{
+    list-style: none;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(246, 246, 246);
+    display: flex;
+    flex-wrap: wrap;
+    right: 15px;
+    top: 30px;
+    visibility: hidden;
+    z-index: 1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.header .container .links:hover ul{
+    visibility:visible;
+}
+
+.header .container .links ul li a{
+    margin: 10px;
+    color: initial;
+    text-decoration:none;
+    visibility: hidden;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.header .container .links:hover ul li a{
+    visibility: visible;
+}
+
+.header .container .links ul li a:hover{
+    padding-left: 5px;
+    
+}
+.header .container .links ul li  {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-bottom: solid 1px #ddd;
+}
+.header .container .links ul li:nth-of-type(4){
+    border-bottom: transparent;
+}
+.header .container .links ul::before{
+    content: "";
+    border-top: solid 10px transparent;
+    border-right: solid 10px transparent;
+    border-left: solid 10px transparent;
+    border-bottom: solid 10px rgb(246 246 246);
+    position: absolute;
+    right: 5px;
+    top: -20px;
+    
+}                                               /*The end of  the header section*/
+/* _______________________________________________________________ */
+.parent{                                         /* start landing section*/
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative
+}
+.TextOnImage1 h1{
+    text-align: center;
+    color: #10cab7; 
+    font-weight: bold;
+    font-size: 50px;
+}
+.TextOnImage1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0%;
+}
+.TextOnImage1 p{
+    text-align: center;
+    font-size: 19px;
+    line-height: 1.8;
+}                                               /* End landing section*/
+/* _______________________________________________________________ */
+.features{                                       /*Start the Features section*/
+    padding: 27px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.features .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.features .container div{
+    width: auto;
+    height: 225px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;  
+    margin-top: 22px;
+}
+.features .container div p{
+    width: 287px;
+    text-align: center;
+    line-height: 1.8;
+    color: #777;
+    font-size: 17px;
+}
+.features .container div h3{
+    font-weight: 800;
+    margin: 30px 0px;
+}
+.features .container div i{
+    color: var(--main-color);
+}                                               /*  End the Features section */
+/* _______________________________________________________________ */
+.services{                                      /* start the Services section */
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 50px;
+}
+.services .container .contents {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 100px;
+    gap: 10px 10px ;
+}
+.services .container .contents .column .template{
+    display: flex;
+    flex-direction: row;
+  
+    padding-bottom: 60px;
+}
+@media (max-width: 1199px) {
+    .column-image{
+        display: none;
+    }
+
+    
+}
+@media (max-width:767px) {
+    .services .container .contents .column .template{
+        flex-direction: column;
+        align-items: center;
+    }
+    .services .container .contents .column .template i,
+    .services .container .contents .column .template h3{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+.services .container .contents .column-image .image{
+    position: relative;
+    text-align: center;
+}
+.services .container .contents .column-image .image img{
+    width: 260px;
+}
+.services .container .contents .column-image .image::before{
+    content: "";
+    background-color: #2c4755;
+    position: absolute;
+    right: 0%;
+    width: 100px;
+    top: -50px;
+    height: calc(100% + 100px);
+    z-index: -1;
+}
+.services .container .contents .column .template i{
+    color: var(--main-color); 
+}
+.services .container .contents .column .template .text p{
+    color: #444;
+    font-weight: 300;
+    line-height: 1.6;
+}
+.services .container .contents .column .template .text h3{
+    margin-bottom: 20px;
+}
+.services .container .contents .column .template .text {
+    margin-left: 30px ;
+    
+}                                                       /* End the Services section */
+/* __________________________________________________________ */
+.Portfolio{                                             /* start the Portfolio section */
+    background-color: var(--secondary-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 50px;
+}
+.Portfolio .container .pictures{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 100px;
+    gap: 0px 30px ;
+}
+.Portfolio .container .pictures div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+}
+.Portfolio .container .pictures div .text{
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    
+}
+.Portfolio .container .pictures div .text h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Portfolio .container .pictures div .text p{
+    color: #777;
+    line-height: 1.6;
+}                                                       /* End the Portfolio section */
+/* __________________________________________________________ */
+.About{                                                 /* start the About section */
+    padding-bottom: 60px;
+}
+.About .container .contents{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+.About .container .contents .picture  img{
+    max-width: 100%;
+    position: relative;
+}
+.About .container .contents .picture {
+    position: relative;
+    width: 250px;
+    height: 375px;
+}
+.About .container .contents .picture::after{
+    content: "";
+    width: 125px;
+    height: 300px;
+    position: absolute;
+    top: -40px;
+    left: 88%;
+    z-index: -1;
+    border-bottom: solid var(--main-color) 75px;
+    border-left: solid var(--main-color) 75px;
+}
+.About .container .contents .picture::before{
+    content: "";
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    position:absolute;
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+} 
+@media (max-width:991px) {
+    .About .container .contents .picture::before,
+    .About .container .contents .picture::after{
+        display: none;
+    }
+    .About .container .contents .picture{
+        margin: auto;
+    }
+    .About .container .contents {
+        flex-direction: column;
+        text-align: center;
+    }
+    .About .container .contents .pragraph hr{
+        margin: 0px auto;
+    }
+}
+.About .container .contents .pragraph p:first-child{
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+.About .container .contents .pragraph p:last-child{
+    line-height: 2;
+    color: #777;
+    margin-top: 50px;
+}
+.About .container .contents .pragraph {
+    flex-basis: 651px;
+    height: 300px;
+    padding: 19px;
+}
+.About .container .contents .pragraph hr{ 
+    width: 50%;
+    display: inline-block;
+    border-color: #10cab7 ;
+}                                                   /* End the About section */
+/* _________________________________________________________________________ */
+.contact .container .contents{                      /* start the contact section */
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.contact{
+    background-color: var(--secondary-color);
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+.contact .container .contents .one{
+    font-size: 35px;
+    font-weight: 800;
+    color: #2c4755;
+    letter-spacing: -2px;
+}
+@media (max-width:767px)
+{
+    .contact .container .contents .one,
+    .contact .container .contents .two a{
+        font-size: 30px;
+    }
+}
+.contact .container .contents .two{
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.contact .container .contents .two a{
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.contact .container .contents .three i{
+    color: #2c4755;
+    margin-left: 10px;
+}
+.contact .container .contents .three p{
+    font-size: 16px;
+    }
+.contact .container .contents .three{
+    display: inline-flex;
+}                                                        /* End the contact section */
+/* ______________________________________________________________________ */
+.footer{                                        /* ________footer_________ */
+    background-color: #2c4755;
+    text-align: center;
+    padding: 30px ;
+    color: white;
+    font-size: 18px;
+}
+.footer span{
+    color: var(--main-color);
+    font-weight: bold;
+}
